@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="https://peaplant.github.io/biocalculator/cell_counting"/>
+  <meta charset="utf-8">
+  <title>Biology calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="javafile.js"></script>
+
+</head>
+
+<body>
+<script src="javafile.js"></script>
+  <!-- !!dark mode code!!
+    <input type="button" value="Dark" onclick="
+      DarkMode(this)">
+  -->
+  <header class="ib">
+  <h1 class="ib">Biology Calculator&ensp;&nbsp;&nbsp;</h1>
+  </header>
+
+  <div class="blueborder ib">
+    <div class="flex_container">
+    <h3 style="margin-left: 0.5vw; ">Timer 1</h3>
+    <button onclick="timer1_reset()" id="button_reset1" style="height: 2vw; width: 5vw; margin-left: 0.45vw; font-size: 1vw; margin-right :0.5vw; position: relative; left:3vw;" class=inputclass_timer>Reset</button>
+  </div>
+  <div class="flex_container">
+      <input id="timer1_h" style="margin-left: 0.5vw; " class="inputclass_timer" placeholder="Hour">
+      <input id="timer1_m" class="inputclass_timer" placeholder="Min.">
+      <input id="timer1_s" style="margin-right: 0.5vw; "class="inputclass_timer" placeholder="Sec.">
+  </div>
+      <div class="flex_container">
+      <button onclick="stopwatch_1()" id="button_timer1" style="height: 2.5vw; width: 6.5vw; margin-left: 0.45vw; margin-right :0.5vw;" class="inputclass_timer">Start</button>
+      <textarea id="result_timer1" style="width : 8vw; font-size: 1.6vw;"class="inputclass_timer" placeholder="hh:mm:ss" readonly></textarea>
+  </div>
+</div>
+<nav>
+  <div class="grid">
+    <a href="mole.html">
+      <div class="shape blue1" id="touch">Mole</div></a>
+    <a href="seeding.html">
+      <div class="shape blue2" id="touch">Seeding</div></a>
+    <a href="cell_stock.html">
+      <div class="shape blue3" id="touch">Cell Stock</div></a>
+      <a href="cell_counting.html">
+        <div style="font-size: 2.7vw; padding-top: 1vw;" class="shape blue5" id="touch" >Cell Counting</div></a>
+    <a href="DNA.html">
+      <div class="shape blue4" id="touch">DNA Tm</div></a>
+
+  </div>
+  </nav>
+  <div class="sidenav">
+  <div class="comments" id="touch">
+    <a href="comments.html">&nbsp;&nbsp;&nbsp;Comments&nbsp;&nbsp;&nbsp;</a>
+  </div><!-- forum
+    <div class="qa" id="touch">
+    <a href="qa.html">&nbsp;Experiment Q&A&nbsp;</a>
+  </div> -->
+  </div>
+
+  <div class="backcolor back5">
+    <article>
+      <div class="position1">
+      <h2 id="t"> Cell counting calculator for hemocytometer </h2>
+      <div class="flex_container">
+        <div>
+          <h3> Square1 </h3>
+          <input id="count_square1" class="inputclass_small" placeholder="Square1">
+        </div>
+        <div>
+          <h3> Square2 </h3>
+
+          <input id="count_square2" class="inputclass_small" placeholder="Square2">
+        </div>
+        <div>
+          <h3> Square3 </h3>
+          <input id="count_square3" class="inputclass_small" placeholder="Square3">
+        </div>
+        <div>
+          <h3> Square4 </h3>
+          <input id="count_square4" class="inputclass_small" placeholder="Square4">
+        </div>
+      </div>
+        <div class="ib">
+          <h3> Dilution Factor </h3>
+          <input id="count_dilution" class="inputclass_medium" placeholder="Dilution Factor">
+        </div>
+        <div class="ib">
+          <h4> X<h4>
+        </div>
+        <div class="flex_container">
+          <button onclick="count()" class="button inputclass">Calculate</button>
+          <textarea id="count_result" class="result_left inputclass" placeholder="Cell density" readonly></textarea>
+        </div>
+      </div>
+      <textarea id="hidden_1" hidden style="width: 1px; height: 1px"></textarea>
+      <textarea id="hidden_2" hidden style="width: 1px; height: 1px"></textarea>
+      <br>
+      <br>      <br>
+    </article>
+
+  <footer>
+    <div class="position1">
+    <p>Feedback & ad request : thepeaplant@gmail.com <br>
+       Copyright ⓒ 2020. Logan Go. All Rights Reserved. </p>
+     </div>
+  </footer>
+  </div>
+</body>
+</html>

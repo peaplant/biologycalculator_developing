@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="canonical" href="https://peaplant.github.io/biocalculator/DNA"/>
+  <meta charset="utf-8">
+  <title>Biology calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="javafile.js"></script>
+</head>
+
+<body>
+  <!-- !!dark mode code!!
+    <input type="button" value="Dark" onclick="
+      DarkMode(this)">
+  -->
+  <header class="ib">
+  <h1 class="ib">Biology Calculator&ensp;&nbsp;&nbsp;</h1>
+  </header>
+
+  <div class="blueborder ib">
+    <div class="flex_container">
+    <h3 style="margin-left: 0.5vw; ">Timer 1</h3>
+    <button onclick="timer1_reset()" id="button_reset1" style="height: 2vw; width: 5vw; margin-left: 0.45vw; font-size: 1vw; margin-right :0.5vw; position: relative; left:3vw;" class=inputclass_timer>Reset</button>
+  </div>
+  <div class="flex_container">
+      <input id="timer1_h" style="margin-left: 0.5vw; " class="inputclass_timer" placeholder="Hour">
+      <input id="timer1_m" class="inputclass_timer" placeholder="Min.">
+      <input id="timer1_s" style="margin-right: 0.5vw; "class="inputclass_timer" placeholder="Sec.">
+  </div>
+      <div class="flex_container">
+      <button onclick="stopwatch_1()" id="button_timer1" style="height: 2.5vw; width: 6.5vw; margin-left: 0.45vw; margin-right :0.5vw;" class="inputclass_timer">Start</button>
+      <textarea id="result_timer1" style="width : 8vw; font-size: 1.6vw;"class="inputclass_timer" placeholder="hh:mm:ss" readonly></textarea>
+  </div>
+</div>
+<nav>
+  <div class="grid">
+    <a href="mole.html">
+      <div class="shape blue1" id="touch">Mole</div></a>
+    <a href="seeding.html">
+      <div class="shape blue2" id="touch">Seeding</div></a>
+    <a href="cell_stock.html">
+      <div class="shape blue3" id="touch">Cell Stock</div></a>
+      <a href="cell_counting.html">
+        <div style="font-size: 2.7vw; padding-top: 1vw;" class="shape blue5" id="touch" >Cell Counting</div></a>
+    <a href="DNA.html">
+      <div class="shape blue4" id="touch">DNA Tm</div></a>
+  </div>
+</nav>
+<div class="sidenav">
+<div class="comments" id="touch">
+  <a href="comments.html">&nbsp;&nbsp;&nbsp;Comments&nbsp;&nbsp;&nbsp;</a>
+</div><!-- forum
+  <div class="qa" id="touch">
+  <a href="qa.html">&nbsp;Experiment Q&A&nbsp;</a>
+</div> -->
+</div>
+  <div class="backcolor back4">
+    <article>
+    <div class="position1">
+      <h2> Tm value of DNA </h2>
+      <div>
+        <div class="flex_container">
+          <div>
+            <h3>&nbsp; DNA sequence (only A,T,G,C are allowed) </h3>
+
+            <input id="dna_input" class="inputclass_large" placeholder="Type DNA sequence">
+          </div>
+          <div>
+            <h3> Length of DNA </h3>
+            <textarea id="dna_length" class="inputclass_small" placeholder="Length"></textarea>
+          </div>
+        </div>
+        <div class="flex_container">
+          <button onclick="dna()" class="button inputclass">Calculate</button>
+          <textarea id="dna_result_tm" class ="result_left inputclass_small2" placeholder="Tm value" readonly></textarea>
+          <textarea id="dna_result_gc" class ="result_left inputclass_small2" placeholder="GC content" readonly></textarea>
+        </div>
+        <br>
+          <div class="ib" style="height: 10vw;float: left"><p>Formula :&ensp; </p></div>
+            <div class="ib" style="float: left;"><p>For sequence less than 14 nucleotides : Tm= (nA+nT)*2+(nG+nC)*4 <br>
+            For sequences longer than 13 nucleotides : Tm= 64.9 + 41*(nG+nC-16.4)/(nA+nT+nG+nC) <br>
+            <br>
+            nA : number of A, nT : number of T, nG : number of G, nC : number of C
+            <br>
+            *Tm calculation varies between sites. So you have to optimize it yourself.<br></p></div>
+
+
+
+
+
+  </div>
+</div>
+<textarea id="hidden_1" hidden style="width: 1px; height: 1px"></textarea>
+<textarea id="hidden_2" hidden style="width: 1px; height: 1px"></textarea>
+</article>
+<footer>
+<div class="position1">
+<p><br><br><br><br><br><br><br><br><br><br>Feedback & ad request : baneling200@gmail.com <br>
+   Copyright ⓒ 2020. Go. All Rights Reserved. </p>
+ </div>
+</footer>
+</div>
+</body>
+
+
+</html>
